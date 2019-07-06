@@ -1,6 +1,6 @@
 .navbar {
-	opacity: 0.6;
-  	filter: alpha(opacity=60);
+	opacity: 0.8;
+  	filter: alpha(opacity=80);
   	border: none;	
 }
 
@@ -9,42 +9,51 @@
 }
 
 .navbar .container .navbar-header .navbar-brand .img-responsive{
-	color: #ffff;
-}
-
-.navbar .container .navbar-header .navbar-brand p{
-	position: relative;
-	left: 2.8vw;
-	top: -3.5vh;
-	font-family: 'Nunito', sans-serif;
-	color: #ffff;
-	font-size: 1.5em;
+	background-color: rgb(255,255,255,0.3);
+	color: #fff;
 }
 
 #banner {
-	background-image: url("images/home/banner.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: #cccccc;
-	height: 80vh;
-	position: relative;
+  	background-image: url("images/banner/banner.jpg");
+  	height: 100vh;
+  	background-position: center;
+  	background-repeat: no-repeat;
+ 	background-size: cover;
+ 	position: relative;
 }
 
-#banner .bcontent{
+#banner .overlay{
+	height: 100vh;
+	background-color: rgb(0, 0, 0,0.1);
+}
+
+#banner .overlay .row div{
 	position: absolute;
-	left: 75vw;
-	top: 25vh;
-	color: #ffff;
-	text-align: justify;
+	top: 20%;
+	/*background-color: rgb(225,255,254);*/
+	color: #fff;
+	padding: 50px 40px;
+	font-family: 'Poppins', sans-serif;
 }
 
-#banner .bcontent .btn a{
-	text-decoration: none;
-	color: #ffff;
+#banner .overlay .row div h1{
+	 font-size: 4em;
+	 text-shadow: 2px 2px 3px black;
+}
+
+#banner .overlay .row div h4{
+	 font-size: 2em;
+	 text-shadow: 2px 2px 3px black;
+}
+
+#banner .overlay .row div .btn{
+	padding: 5px 80px;
+	margin-top: 2vh;
 }
 
 #aboutme {
 	padding-top: 15vh;
+	padding-bottom: 15vh;
 }
 
 #aboutme .row div .btn{
@@ -69,7 +78,38 @@
 }
 
 #skills .container .row div{
-margin-bottom: 	2vh;
+	margin-bottom: 	2vh;
+}
+
+#skills .container .row div .skills{
+	position: relative;
+ 	width: 100%;
+	max-width: 300px;
+}
+
+#skills .container .row div .skills img{
+	display: block;
+ 	width: 100%;
+  	height: auto;
+}
+
+#skills .container .row div .skills .overlay{
+	position: absolute; 
+  	bottom: -20px; 
+  	background: rgb(0, 0, 0);
+  	background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  	color: #f1f1f1; 
+  	width: 100%;
+  	transition: .5s ease;
+  	opacity:0;
+  	color: white;
+ 	font-size: 20px;
+  	padding: 20px;
+ 	text-align: center;
+}
+
+#skills .container .row div .skills:hover .overlay{
+	opacity: 1;
 }
 
 #portfolio{
@@ -81,31 +121,68 @@ margin-bottom: 	2vh;
 	margin-bottom: 2vh;
 }
 
-#portfolio .container .row div a{
-	display: flex;
-	justify-content: center;
-	color: #0000FF;
+#portfolio .container .row div a .img-responsive{
+	display:inline-block;
+    border:0;
+    width:100%;
+    height:100%;
+    position: relative;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);
 }
 
-#portfolio .container .row div .img-responsive{
-	margin-bottom: 2vh;
+#portfolio .container .row div a .img-responsive:hover{
+	box-shadow: 0px 0px 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
 }
 
 #contactme{
 	padding: 15vh 0;
+	background-color: rgb(0,0,0,0.1);
 }
 
-#contactme .container .row #map .img-responsive{
-	height: 50vh;
+#contactme div .img-responsive{
+	height: 90vh;
 	width: 100%;
+	margin-bottom: 3vh;
 }
 
-#contactme .container .row #maptxt h4{
-	margin: 0 0 2vh 0;
+#contactme .seconddiv{
+	background-color: rgb(0,0,0,0.1);
+	padding: 5vh;
+}
+
+#contactme .seconddiv .h41{
+	margin-bottom: 0 0 2vh 0;
+	text-shadow: 2px 2px 5px #fff;
+}
+
+#contactme .seconddiv .h42{
+	margin-bottom:  0 0 2vh 0;
+	text-shadow: 2px 2px 5px #fff;
+}
+
+#contactme .seconddiv .h43{
+	margin-bottom:  0 0 2vh 0;
+	text-shadow: 2px 2px 5px #fff;
 }
 
 #footer{
-	background-color: #000000;
+	background-color: rgb(0,0,0,0.3);
 }
 
 #footer .row{
@@ -115,4 +192,5 @@ margin-bottom: 	2vh;
 #footer .row div{
 	display: flex;
 	justify-content: center;
+	color: #fff;
 }
